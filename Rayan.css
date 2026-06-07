@@ -133,7 +133,7 @@ nav {
 /* Right Section */
 .right-section {
     margin-left: 35%;
-    padding: 1rem 8% 1rem 6%;
+    padding: 0 8% 1rem 6%;
     position: relative;
     z-index: 0;
     min-height: 100vh;
@@ -142,8 +142,12 @@ nav {
 .content {
     max-width: 720px;
     margin: 0 auto;
-    padding: 5rem 0;
+    padding: 4rem 0;
     border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.content:first-of-type {
+    padding-top: 7rem;
 }
 
 .content:last-of-type {
@@ -352,4 +356,154 @@ footer {
     h1 {
         font-size: 2rem;
     }
+}
+
+/* ── Command Palette ─────────────────────────────────────── */
+#cmd-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 10000;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 15vh;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#cmd-palette {
+    background: #0d1f3c;
+    border: 1px solid rgba(100, 255, 218, 0.15);
+    border-radius: 14px;
+    width: 100%;
+    max-width: 520px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+    transform: translateY(-12px);
+    transition: transform 0.2s ease;
+}
+
+#cmd-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+}
+
+#cmd-icon {
+    font-size: 1rem;
+    color: #64ffda;
+    flex-shrink: 0;
+}
+
+#cmd-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ccd6f6;
+    font-size: 0.97rem;
+    font-family: 'Inter', sans-serif;
+    caret-color: #64ffda;
+}
+
+#cmd-input::placeholder {
+    color: #4a5568;
+}
+
+#cmd-esc {
+    font-size: 0.72rem;
+    color: #4a5568;
+    border: 1px solid #2d3748;
+    border-radius: 4px;
+    padding: 2px 6px;
+    flex-shrink: 0;
+}
+
+#cmd-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+#cmd-list {
+    list-style: none;
+    margin: 0;
+    padding: 6px;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+#cmd-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+#cmd-list::-webkit-scrollbar-thumb {
+    background: rgba(100, 255, 218, 0.2);
+    border-radius: 2px;
+}
+
+.cmd-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: none;
+    color: #8892b0;
+    font-size: 0.9rem;
+    transition: background 0.15s, color 0.15s;
+}
+
+.cmd-item.cmd-active {
+    background: rgba(100, 255, 218, 0.08);
+    color: #ffffff;
+}
+
+.cmd-item-icon {
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+    color: #64ffda;
+    font-size: 0.85rem;
+}
+
+#cmd-footer {
+    display: flex;
+    gap: 16px;
+    padding: 10px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    color: #4a5568;
+    font-size: 0.75rem;
+}
+
+/* Hint text in left panel */
+#cmd-hint {
+    margin-top: 1.5rem;
+    font-size: 0.78rem;
+    color: #4a5568;
+}
+
+#cmd-hint kbd {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: #8892b0;
+}
+
+/* Typewriter cursor on tagline */
+.tagline::after {
+    content: '|';
+    color: #64ffda;
+    animation: blink 0.7s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
 }
