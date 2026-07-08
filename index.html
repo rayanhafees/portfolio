@@ -3,287 +3,435 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rayan Mohammed - Portfolio</title>
+    <title>Rayan Mohammed — Dossier</title>
 
     <link rel="icon" type="image/png" href="Rayan_Images/fevicon.png">
-    <link rel="stylesheet" href="Rayan.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script>try { if (localStorage.getItem('rm-theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}</script>
 </head>
-
 <body>
 
-    <div class="mouse-glow"></div>
-
-    <!-- LEFT SECTION -->
-    <div class="left-section">
-
-        <div class="name-section">
-            <h1>Rayan Mohammed</h1>
-            <h2>CS Graduate · B.Tech VIT</h2>
-            <p class="tagline">
-                Data Analytics · Automation · Backend Engineering
-            </p>
-
-            <p style="margin-top:10px;">
-                Kochi, Kerala, India
-            </p>
-
-            <p>
-                Open to Full-Time Opportunities
-            </p>
-        </div>
-
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#About">About</a></li>
-                <li><a href="#Experience">Experience</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Education">Education</a></li>
-                <li><a href="#Certifications">Certifications</a></li>
-            </ul>
+    <!-- TOP BAR -->
+    <header class="topbar">
+        <span class="topbar-doc">DOC. RM-2026-001</span>
+        <nav class="topbar-nav">
+            <a href="#sec-01">01</a>
+            <a href="#sec-02">02</a>
+            <a href="#sec-03">03</a>
+            <a href="#sec-04">04</a>
+            <a href="#sec-05">05</a>
+            <a href="#sec-06">06</a>
         </nav>
-
-        <div class="social-links">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rayanhafees@gmail.com"
-                target="_blank" aria-label="Gmail">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/rayan-mohammed-265690191/"
-                target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/rayanhafees"
-                target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://instagram.com/rayan_hafees"
-                target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
+        <div class="topbar-right">
+            <span class="topbar-read">READ: <span id="read-pct">0</span>%</span>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Invert color scheme">INVERT</button>
         </div>
+    </header>
 
-        <div style="margin-top:20px;">
-            <a href="Resume.pdf" target="_blank" class="project-btn">
-                Download Resume
+    <main>
+
+        <!-- ============ COVER ============ -->
+        <section class="cover">
+            <div class="cover-meta">
+                <div class="cover-meta-row">
+                    <span class="k">SUBJECT</span>
+                    <span class="v">Candidate profile — software · AI · data</span>
+                </div>
+                <div class="cover-meta-row">
+                    <span class="k">PREPARED</span>
+                    <span class="v">July 2026 · Kochi, IN · 9.9312° N, 76.2673° E</span>
+                </div>
+                <div class="cover-meta-row">
+                    <span class="k">STATUS</span>
+                    <span class="v status-open"><span class="status-dot"></span>OPEN TO FULL-TIME ROLES</span>
+                </div>
+            </div>
+
+            <h1 class="cover-name" id="cover-name">RAYAN<br>MOHAMMED</h1>
+
+            <div class="cover-foot">
+                <p class="cover-role">Software Engineering / AI &amp; Machine Learning / Data &amp; Automation</p>
+                <p class="cover-hint">Scroll to review ↓</p>
+            </div>
+        </section>
+
+        <!-- ============ SEC 01 · SUMMARY ============ -->
+        <section class="sec" id="sec-01">
+            <div class="sec-label"><span class="sec-no">SEC. 01</span><span class="sec-name">EXECUTIVE SUMMARY</span></div>
+
+            <p class="summary-lede">
+                Software engineer (B.Tech CS, VIT 2026) who builds and ships
+                <mark>end to end</mark> — backend REST systems, containerized automation,
+                and applied AI. Designed a hybrid DQN + NSGA-II scheduler that beat six
+                optimization baselines by <mark>38–44%</mark> (p&nbsp;&lt;&nbsp;0.001).
+                Not a tutorial-project profile: two products currently
+                <mark>live in production</mark>.
+            </p>
+
+            <div class="findings">
+                <div class="finding">
+                    <span class="finding-id">F-01</span>
+                    <p><strong>Ships to real users.</strong> VSync is live on the Google Play Store with 200+ users; VayoAura is a deployed B2B travel platform serving business clients.</p>
+                </div>
+                <div class="finding">
+                    <span class="finding-id">F-02</span>
+                    <p><strong>Does real AI work, not API calls.</strong> Designed a hybrid DQN + NSGA-II + Honey Badger scheduler on real Alibaba cluster traces — outperformed GA, PSO, GWO, EHO, HBO, and RL baselines by 38–44% (Wilcoxon rank-sum, 30 runs), reaching HEFT-optimal makespan on a 450-task workload.</p>
+                </div>
+                <div class="finding">
+                    <span class="finding-id">F-03</span>
+                    <p><strong>Engineers the whole stack.</strong> Debugged REST APIs and implemented RBAC in industry (CVS Info Solutions), led API design and architecture at MicroIT, and containerizes everything — Docker, n8n, Linux, AWS (EC2, S3, IAM, VPC).</p>
+                </div>
+            </div>
+
+            <div class="metrics">
+                <div class="metric">
+                    <span class="metric-num" data-count="200" data-suffix="+">0</span>
+                    <span class="metric-label">app users in production</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-num" data-count="6" data-suffix="">0</span>
+                    <span class="metric-label">projects delivered</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-num" data-count="44" data-suffix="%">0</span>
+                    <span class="metric-label">peak gain over 6 optimization baselines</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-num" data-count="450" data-suffix="">0</span>
+                    <span class="metric-label">tasks scheduled at HEFT-optimal makespan</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SEC 02 · EMPLOYMENT RECORD ============ -->
+        <section class="sec" id="sec-02">
+            <div class="sec-label"><span class="sec-no">SEC. 02</span><span class="sec-name">EMPLOYMENT RECORD</span></div>
+
+            <!-- Gantt -->
+            <figure class="gantt">
+                <figcaption class="fig-caption">FIG. 2.0 — Engagement timeline, 2022–2026</figcaption>
+
+                <div class="gantt-axis">
+                    <span style="left:0%">2022</span>
+                    <span style="left:22.2%">2023</span>
+                    <span style="left:44.4%">2024</span>
+                    <span style="left:66.7%">2025</span>
+                    <span style="left:88.9%">2026</span>
+                </div>
+
+                <div class="gantt-rows">
+                    <div class="gantt-row">
+                        <span class="gantt-name">B.TECH CSE — VIT-AP</span>
+                        <div class="gantt-track">
+                            <div class="gantt-bar bar-edu" style="left:13%; width:85%"></div>
+                        </div>
+                    </div>
+                    <div class="gantt-row">
+                        <span class="gantt-name">MICROIT — CO-FOUNDER</span>
+                        <div class="gantt-track">
+                            <div class="gantt-bar" style="left:42.6%; width:25.9%"></div>
+                        </div>
+                    </div>
+                    <div class="gantt-row">
+                        <span class="gantt-name">CVS INFO — SWE INTERN</span>
+                        <div class="gantt-track">
+                            <div class="gantt-bar" style="left:55.6%; width:5.6%"></div>
+                        </div>
+                    </div>
+                    <div class="gantt-row">
+                        <span class="gantt-name">AIESEC — BIZ DEV</span>
+                        <div class="gantt-track">
+                            <div class="gantt-bar" style="left:57.4%; width:18.5%"></div>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+
+            <!-- Records -->
+            <div class="records">
+                <article class="record">
+                    <div class="record-head">
+                        <span class="record-id">E-01</span>
+                        <h3>Software Development Intern</h3>
+                        <span class="record-org">CVS Info Solutions, Infopark</span>
+                        <span class="record-date">JUL 2024</span>
+                    </div>
+                    <p>Debugged REST API endpoints and backend modules to resolve authentication, data-flow, and user-access defects across the stack. Implemented and analyzed role-based access control (RBAC) to secure user and admin workflows; investigated API failures through log analysis to improve query performance.</p>
+                </article>
+
+                <article class="record">
+                    <div class="record-head">
+                        <span class="record-id">E-02</span>
+                        <h3>Co-Founder — Backend Lead</h3>
+                        <span class="record-org">MicroIT, student tech initiative</span>
+                        <span class="record-date">DEC 2023 — JAN 2025</span>
+                    </div>
+                    <p>Shipped core backend features for VayoAura, a live B2B travel platform serving real customers — owning development end to end at startup pace. Led API design and system architecture for web and mobile, taking client requirements from spec to production.</p>
+                </article>
+
+                <article class="record">
+                    <div class="record-head">
+                        <span class="record-id">E-03</span>
+                        <h3>Business Development Associate</h3>
+                        <span class="record-org">AIESEC in Amaravati</span>
+                        <span class="record-date">AUG 2024 — MAY 2025</span>
+                    </div>
+                    <p>Outbound prospecting across email, LinkedIn, and cold calls — 40–60 B2B leads engaged weekly, booking 5–6 discovery calls and partner meetings per month. Qualified leads by fit and intent with disciplined multi-touch follow-ups.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ SEC 03 · PROJECT LEDGER ============ -->
+        <section class="sec" id="sec-03">
+            <div class="sec-label"><span class="sec-no">SEC. 03</span><span class="sec-name">PROJECT LEDGER</span></div>
+
+            <div class="ledger">
+                <div class="ledger-head">
+                    <span>ID</span><span>PROJECT</span><span>STACK</span><span>STATUS</span>
+                </div>
+
+                <a class="ledger-row" href="https://github.com/rayanhafees/energy-aware-cloud-scheduler" target="_blank">
+                    <span class="lg-id">P-01</span>
+                    <span class="lg-name">
+                        Task Scheduling Optimization — Distributed Systems
+                        <em>Hybrid DQN + NSGA-II + Honey Badger scheduler on real Alibaba traces. 38–44% over GA/PSO/GWO/EHO/HBO/RL baselines (p &lt; 0.001); DQN manager adaptively selects among 7 evolutionary operators.</em>
+                    </span>
+                    <span class="lg-stack">Python · PyTorch · DQN · NSGA-II</span>
+                    <span class="lg-status st-ai">AI/ML</span>
+                </a>
+
+                <a class="ledger-row" href="https://play.google.com/store/apps/details?id=com.tiorcim.vysnc_v1&hl=en" target="_blank">
+                    <span class="lg-id">P-02</span>
+                    <span class="lg-name">
+                        VSync — College Companion
+                        <em>Full-stack academic app: GPA computation from structured records, clean architecture, reusable UI components. Live on Google Play with 200+ users.</em>
+                    </span>
+                    <span class="lg-stack">Flutter · Dart · REST</span>
+                    <span class="lg-status st-live">LIVE</span>
+                </a>
+
+                <a class="ledger-row" href="https://vayoaura.com/" target="_blank">
+                    <span class="lg-id">P-03</span>
+                    <span class="lg-name">
+                        VayoAura — B2B Travel Platform
+                        <em>Business workflows, client operations, digital booking. Led backend &amp; API design, spec to production.</em>
+                    </span>
+                    <span class="lg-stack">Backend · REST · Architecture</span>
+                    <span class="lg-status st-live">LIVE</span>
+                </a>
+
+                <a class="ledger-row" href="https://github.com/rayanhafees/clara-automation-pipeline" target="_blank">
+                    <span class="lg-id">P-04</span>
+                    <span class="lg-name">
+                        Clara — AI Automation Pipeline
+                        <em>AI call transcripts → structured agent-configuration artifacts. Version-controlled n8n workflows, reproducible via Docker Compose.</em>
+                    </span>
+                    <span class="lg-stack">Python · n8n · Docker</span>
+                    <span class="lg-status st-oss">CODE</span>
+                </a>
+
+                <div class="ledger-row is-static">
+                    <span class="lg-id">P-05</span>
+                    <span class="lg-name">
+                        Gesture-Controlled Drone
+                        <em>Real-time computer vision mapping hand gestures to flight controls; OpenCV pipelines tuned for low latency.</em>
+                    </span>
+                    <span class="lg-stack">Raspberry Pi · OpenCV · MPU6050</span>
+                    <span class="lg-status st-hw">HW</span>
+                </div>
+
+            </div>
+
+            <p class="ledger-note">* Rows P-01 — P-04 link to live product or source. Hover any row for detail.</p>
+
+            <!-- Benchmark chart -->
+            <figure class="bench">
+                <figcaption class="fig-caption">FIG. 3.1 — P-01 · relative makespan vs six baselines · proposed = 100 · lower is better</figcaption>
+
+                <div class="bench-rows">
+                    <div class="bench-row is-ours">
+                        <span class="bench-name">PROPOSED — DQN + NSGA-II + HBA</span>
+                        <div class="bench-track">
+                            <div class="bench-bar" style="width:50%"></div>
+                            <span class="bench-val" style="left:50%">100</span>
+                        </div>
+                    </div>
+                    <div class="bench-row">
+                        <span class="bench-name">PSO &nbsp;·&nbsp; −37.9%</span>
+                        <div class="bench-track">
+                            <div class="bench-bar" style="width:80.5%"></div>
+                            <span class="bench-val" style="left:80.5%">161</span>
+                        </div>
+                    </div>
+                    <div class="bench-row">
+                        <span class="bench-name">EHO &nbsp;·&nbsp; −38.0%</span>
+                        <div class="bench-track">
+                            <div class="bench-bar" style="width:80.7%"></div>
+                            <span class="bench-val" style="left:80.7%">161</span>
+                        </div>
+                    </div>
+                    <div class="bench-row">
+                        <span class="bench-name">GWO &nbsp;·&nbsp; −38.1%</span>
+                        <div class="bench-track">
+                            <div class="bench-bar" style="width:80.8%"></div>
+                            <span class="bench-val" style="left:80.8%">162</span>
+                        </div>
+                    </div>
+                    <div class="bench-row">
+                        <span class="bench-name">HBO &nbsp;·&nbsp; −40.2%</span>
+                        <div class="bench-track">
+                            <div class="bench-bar" style="width:83.7%"></div>
+                            <span class="bench-val" style="left:83.7%">167</span>
+                        </div>
+                    </div>
+                    <div class="bench-row">
+                        <span class="bench-name">GA &nbsp;·&nbsp; −43.9%</span>
+                        <div class="bench-track">
+                            <div class="bench-bar" style="width:89.2%"></div>
+                            <span class="bench-val" style="left:89.2%">178</span>
+                        </div>
+                    </div>
+                    <div class="bench-row">
+                        <span class="bench-name">RL (DQN ONLY) &nbsp;·&nbsp; −44.7%</span>
+                        <div class="bench-track">
+                            <div class="bench-bar" style="width:90.4%"></div>
+                            <span class="bench-val" style="left:90.4%">181</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bench-axis">
+                    <span style="left:0%">0</span>
+                    <span style="left:25%">50</span>
+                    <span style="left:50%">100</span>
+                    <span style="left:75%">150</span>
+                    <span style="left:100%">200</span>
+                </div>
+
+                <p class="bench-note">
+                    30-run mean makespan on Alibaba job j_139493 (301 tasks, 100 processors).
+                    Proposed = 742.77 s ± 0.49 (near-zero variance); baselines 1196–1343 s.
+                    Makespan reduction spans 37.9% (PSO) to 44.7% (RL); every pairwise
+                    Wilcoxon test p &lt; 0.001, Friedman χ² = 141.1. Full tables in thesis.
+                </p>
+            </figure>
+        </section>
+
+        <!-- ============ SEC 04 · CAPABILITY MATRIX ============ -->
+        <section class="sec" id="sec-04">
+            <div class="sec-label"><span class="sec-no">SEC. 04</span><span class="sec-name">CAPABILITY MATRIX</span></div>
+
+            <div class="matrix">
+                <div class="matrix-group">
+                    <h3>LANGUAGES</h3>
+                    <ul>
+                        <li>Python</li><li>Java</li><li>JavaScript</li><li>SQL</li><li>Dart</li>
+                    </ul>
+                </div>
+                <div class="matrix-group">
+                    <h3>BACKEND</h3>
+                    <ul>
+                        <li>Django</li><li>REST API development</li><li>MySQL</li><li>CouchDB</li>
+                    </ul>
+                </div>
+                <div class="matrix-group">
+                    <h3>AI / DATA &amp; ML</h3>
+                    <ul>
+                        <li>PyTorch</li><li>Pandas / NumPy</li><li>Scikit-learn</li><li>Deep RL (DQN) · NSGA-II</li>
+                    </ul>
+                </div>
+                <div class="matrix-group">
+                    <h3>TOOLS &amp; CLOUD</h3>
+                    <ul>
+                        <li>Docker / Compose</li><li>n8n</li><li>Git · Linux</li><li>AWS — EC2 · S3 · IAM · VPC · Auto Scaling · ELB</li>
+                    </ul>
+                </div>
+                <div class="matrix-group">
+                    <h3>VISUALIZATION &amp; BI</h3>
+                    <ul>
+                        <li>Tableau</li><li>Power BI</li><li>Matplotlib / Seaborn</li>
+                    </ul>
+                </div>
+                <div class="matrix-group">
+                    <h3>CORE CS</h3>
+                    <ul>
+                        <li>Data Structures &amp; Algorithms</li><li>OOP</li><li>DBMS</li><li>Distributed Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SEC 05 · EDUCATION & CREDENTIALS ============ -->
+        <section class="sec" id="sec-05">
+            <div class="sec-label"><span class="sec-no">SEC. 05</span><span class="sec-name">EDUCATION &amp; CREDENTIALS</span></div>
+
+            <div class="records">
+                <article class="record">
+                    <div class="record-head">
+                        <span class="record-id">Q-01</span>
+                        <h3>B.Tech — Computer Science Engineering</h3>
+                        <span class="record-org">Vellore Institute of Technology (VIT)</span>
+                        <span class="record-date">2022 — 2026 </span>
+                    </div>
+                    <p>Coursework: Data Structures &amp; Algorithms · DBMS · Distributed Systems · Data Warehousing &amp; Mining · Data Visualization.</p>
+                </article>
+                <article class="record">
+                    <div class="record-head">
+                        <span class="record-id">Q-02</span>
+                        <h3>FAIPS-DPS, Kuwait</h3>
+                        <span class="record-org">Primary &amp; secondary education</span>
+                        <span class="record-date">2020 — 2022</span>
+                    </div>
+                    <p>Foundation in Mathematics, Science, and analytical reasoning.</p>
+                </article>
+            </div>
+
+            <div class="creds">
+                <div class="cred"><span class="cred-id">C-01</span> AWS Academy Cloud Architecting <span class="cred-yr">2024</span></div>
+                <div class="cred"><span class="cred-id">C-02</span> AWS Academy Cloud Foundations <span class="cred-yr">2024</span></div>
+                <div class="cred"><span class="cred-id">C-03</span> CouchDB Distributed Database System <span class="cred-yr">2024</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SEC 06 · CONTACT ============ -->
+        <section class="sec sec-contact" id="sec-06">
+            <div class="sec-label"><span class="sec-no">SEC. 06</span><span class="sec-name">POINT OF CONTACT</span></div>
+
+            <a class="contact-big" href="https://mail.google.com/mail/?view=cm&fs=1&to=rayanhafees@gmail.com" target="_blank">
+                INITIATE CONTACT <span class="contact-arrow">→</span>
             </a>
-        </div>
 
-    </div>
+            <div class="contact-table">
+                <a class="contact-row" href="https://mail.google.com/mail/?view=cm&fs=1&to=rayanhafees@gmail.com" target="_blank">
+                    <span class="k">EMAIL</span><span class="v">rayanhafees@gmail.com</span>
+                </a>
+                <a class="contact-row" href="https://github.com/rayanhafees" target="_blank">
+                    <span class="k">GITHUB</span><span class="v">/rayanhafees</span>
+                </a>
+                <a class="contact-row" href="https://www.linkedin.com/in/rayan-mohammed-265690191/" target="_blank">
+                    <span class="k">LINKEDIN</span><span class="v">/in/rayan-mohammed</span>
+                </a>
+                <a class="contact-row" href="Resume_7.pdf" target="_blank">
+                    <span class="k">RESUME</span><span class="v">Rayan_Mohammed.pdf ↓</span>
+                </a>
+            </div>
 
-    <!-- RIGHT SECTION -->
-    <div class="right-section">
-        <main>
+            <footer class="endmark">
+                <span>/// END OF REPORT</span>
+                <span>RM-2026-001 · Typeset in Inter &amp; JetBrains Mono</span>
+            </footer>
+        </section>
 
-            <!-- ABOUT -->
-            <section id="About" class="content">
-                <h3>About</h3>
-                <p class="about-text">
-                    Computer Science graduate with hands-on experience in data analysis, SQL, workflow automation, and backend engineering. I extract, transform, and analyze structured and unstructured datasets using Python (Pandas), SQL, and automation pipelines to generate actionable insights.
-                </p>
-                <p class="about-text">
-                    I've built real products a B2B travel platform, a live mobile app on the Play Store, and an AI automation pipeline and I bring the same analytical mindset whether I'm optimizing a query, modeling a dataset, or designing a system.
-                </p>
-            </section>
+    </main>
 
-            
-
-            <!-- EXPERIENCE -->
-            <section id="Experience" class="content">
-                <h3>Experience</h3>
-
-                <div class="timeline">
-
-                    <div class="timeline-item">
-                        <div class="date">Jul 2024</div>
-                        <div class="details">
-                            <h4>Software Development Intern</h4>
-                            <p class="company">CVS Info Solutions, Infopark</p>
-                            <p>
-                                Analyzed API logs and database queries to identify performance bottlenecks and improve backend data flow. Optimized SQL queries, investigated data inconsistencies across systems, and documented solutions to streamline debugging workflows.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="date">Dec 2023 – Jan 2025</div>
-                        <div class="details">
-                            <h4>Co-Founder</h4>
-                            <p class="company">MicroIT – Student Tech Initiative</p>
-                            <p>
-                                Led backend development for web and mobile solutions, focusing on API design, data workflows, and system architecture. Built and deployed VayoAura, a B2B travel platform, and tracked usage metrics and performance indicators to drive iterative improvements.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="date">Aug 2023 – May 2024</div>
-                        <div class="details">
-                            <h4>Business Development Intern</h4>
-                            <p class="company">AIESEC in Amaravati</p>
-                            <p>
-                                Ran outbound prospecting across email, LinkedIn, and cold calls, engaging 40–60 B2B prospects per week. Maintained a structured lead pipeline and booked 5–6 partner meetings per month on average.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- SKILLS -->
-            <section id="Skills" class="content">
-                <h3>Skills</h3>
-
-                <div class="skills-grid">
-                    <div class="skill-group">
-                        <h4>Data Analysis</h4>
-                        <p>SQL (MySQL), Python, Pandas, NumPy, Excel, Data Cleaning, EDA, Statistical Analysis</p>
-                    </div>
-                    <div class="skill-group">
-                        <h4>Visualization &amp; BI</h4>
-                        <p>Matplotlib, Seaborn, Tableau, Power BI</p>
-                    </div>
-                    <div class="skill-group">
-                        <h4>Machine Learning</h4>
-                        <p>Scikit-learn, Linear Regression, Decision Tree, Random Forest</p>
-                    </div>
-                    <div class="skill-group">
-                        <h4>Databases</h4>
-                        <p>MySQL, CouchDB, REST APIs, Data Warehousing Concepts</p>
-                    </div>
-                    <div class="skill-group">
-                        <h4>Backend &amp; Automation</h4>
-                        <p>Django, Docker, Docker Compose, n8n, Git, GitHub</p>
-                    </div>
-                    <div class="skill-group">
-                        <h4>Cloud &amp; Languages</h4>
-                        <p>AWS (Foundations &amp; Architecting), Python, SQL, Java, JavaScript, Dart</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- PROJECTS -->
-            <section id="Projects" class="content">
-                <h3>Projects</h3>
-
-                <div class="project-grid">
-
-                    <div class="project-card">
-                        <h4>Task Scheduling Optimization in Distributed Systems</h4>
-                        <p class="tech-stack">Python · PyTorch · NumPy · DQN · NSGA-II</p>
-                        <p>
-                            Designed and evaluated multi-objective task scheduling optimization models using real Alibaba cluster workload datasets. Conducted comparative benchmarking across algorithms using quantitative performance metrics and statistical validation.
-                        </p>
-                        <a href="https://github.com/rayanhafees/energy-aware-cloud-scheduler" target="_blank" class="project-btn">
-                            View Project
-                        </a>
-                    </div>
-
-                    
-
-                    <div class="project-card">
-                        <h4>Clara AI Automation Pipeline</h4>
-                        <p class="tech-stack">Python · n8n · Docker · Docker Compose · JSON</p>
-                        <p>
-                            Built an automated pipeline to extract, transform, and structure unstructured call transcript data into JSON artifacts. Implemented reproducible containerized execution with Docker Compose for scalable workflow orchestration.
-                        </p>
-                        <a href="https://github.com/rayanhafees/clara-automation-pipeline" target="_blank" class="project-btn">
-                            View Project
-                        </a>
-                        
-                    </div>
-
-                    
-
-                    <div class="project-card">
-                        <h4>VSync – Smart College Companion Platform</h4>
-                        <p class="tech-stack">Flutter · REST APIs · Data Modeling</p>
-                        <p>
-                            Live on the Google Play Store. Built academic companion app with timetable management, attendance tracking, GPA/CGPA prediction, and dynamic retrieval of institutional data for 200+ users.
-                        </p>
-                        <a href="https://play.google.com/store/apps/details?id=com.tiorcim.vysnc_v1&hl=en"
-                            target="_blank" class="project-btn">
-                            View on Play Store
-                        </a>
-                    </div>
-
-                    <div class="project-card">
-                        <h4>VayoAura – B2B Travel Platform</h4>
-                        <p class="tech-stack">Backend · REST APIs · System Architecture</p>
-                        <p>
-                            Co-developed a travel management platform supporting business workflows, client operations, and digital booking experiences. Led backend development and API design.
-                        </p>
-                        <a href="https://vayoaura.com/" target="_blank" class="project-btn">
-                            View Project
-                        </a>
-                    </div>
-
-                    <div class="project-card">
-                        <h4>Gesture Controlled Drone</h4>
-                        <p class="tech-stack">Raspberry Pi · OpenCV · MPU6050 · Python</p>
-                        <p>
-                            Built a gesture-controlled drone using computer vision techniques for surveillance and filmmaking applications.
-                        </p>
-                    </div>
-
-                    <div class="project-card">
-                        <h4>Predicting Student Stress Levels During Exams</h4>
-                        <p class="tech-stack">Python · Pandas · Scikit-learn · Matplotlib</p>
-                        <p>
-                            Analyzed behavioral and lifestyle datasets to identify patterns influencing exam stress. Performed data cleaning, feature engineering, and EDA; built and evaluated classification models using accuracy, precision, recall, and F1 score.
-                        </p>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- EDUCATION -->
-            <section id="Education" class="content">
-                <h3>Education</h3>
-
-                <div class="timeline">
-
-                    <div class="timeline-item">
-                        <div class="date">2022 – 2026</div>
-                        <div class="details">
-                            <h4>VIT-AP University</h4>
-                            <p>B.Tech – Computer Science Engineering</p>
-                            <p>CGPA: 7.6 / 10</p>
-                            <p style="margin-top:0.5rem;">
-                                Relevant Coursework: Data Warehousing &amp; Data Mining, Database Management Systems, Data Visualization, Data Structures &amp; Algorithms
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="date">Schooling</div>
-                        <div class="details">
-                            <h4>FAIPS-DPS, Kuwait</h4>
-                            <p>
-                                Primary and secondary education with a strong foundation in Mathematics, Science, and Analytical Thinking.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- CERTIFICATIONS -->
-            <section id="Certifications" class="content">
-                <h3>Certifications</h3>
-                <ul class="cert-list">
-                    <li>AWS Academy Cloud Architecting (2024)</li>
-                    <li>AWS Academy Cloud Foundations (2024)</li>
-                    <li>CouchDB Distributed Database System (2024)</li>
-                </ul>
-            </section>
-
-        </main>
-        <footer></footer>
-    </div>
-
-    <script src="Rayan.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
